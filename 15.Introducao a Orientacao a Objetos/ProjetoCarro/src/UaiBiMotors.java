@@ -21,8 +21,29 @@ public class UaiBiMotors {
 		c2.preco = 8000;
 		
 		c1.exibirAnuncio();
+		c1.simularSeguro(2);
+		
 		System.out.println();
 		c2.exibirAnuncio();
+		c2.simularSeguro(2);
+		
+		System.out.println("---- Calculando o IPVA dos veículos ----");
+		double ipvaC1 = c1.calcularIPVA();
+		double ipvaC2 = c2.calcularIPVA();
+		
+		if(ipvaC1 == 0) {
+			System.out.println("Veiculo Isento");
+		}
+		else {
+			System.out.println("Valor do IPVA = " + ipvaC1);
+		}
+		
+		if(ipvaC2 == 0) {
+			System.out.println("Veiculo Isento de imposto");
+		}
+		else {
+			System.out.println("Valor do IPVA = " + ipvaC2);
+		}
 		
 		//System.out.println("Carro: ");
 		//System.out.println(c1.marca + "-" + c1.modelo + "("+c1.ano+")");
